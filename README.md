@@ -4,6 +4,7 @@
 [![NPM version](https://badge.fury.io/js/hexo-generator-multilingual-index.svg)](http://badge.fury.io/js/hexo-generator-multilingual-index)
 [![Coverage Status](https://img.shields.io/coveralls/ahaasler/hexo-generator-multilingual-index.svg)](https://coveralls.io/r/ahaasler/hexo-generator-multilingual-index?branch=master)
 [![Dependency Status](https://gemnasium.com/ahaasler/hexo-generator-multilingual-index.svg)](https://gemnasium.com/ahaasler/hexo-generator-multilingual-index)
+[![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](LICENSE)
 
 Multilingual index generator for [Hexo](http://hexo.io/).
 
