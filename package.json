@@ -1,7 +1,7 @@
 {
-  "name": "hexo-generator-index",
+  "name": "hexo-generator-multilingual-index",
   "version": "0.2.0",
-  "description": "Index generator for Hexo.",
+  "description": "Multilingual index generator for Hexo.",
   "main": "index",
   "scripts": {
     "eslint": "eslint .",
@@ -15,16 +15,30 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "repository": "hexojs/hexo-generator-index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahaasler/hexo-generator-multilingual-index"
+  },
   "homepage": "http://hexo.io/",
   "keywords": [
     "hexo",
     "generator",
+    "multilingual",
     "index",
     "home"
   ],
-  "author": "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)",
+  "author": "Adrian Haasler García <dev@adrianhaasler.com> (http://www.adrianhaasler.com)",
+  "contributors": [
+    {
+      "name": "Tommy Chen",
+      "email": "tommy351@gmail.com",
+      "url": "http://zespia.tw"
+    }
+  ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahaasler/hexo-generator-multilingual-index/issues"
+  },
   "devDependencies": {
     "chai": "^3.4.0",
     "eslint": "^1.8.0",
