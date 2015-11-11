@@ -1,6 +1,6 @@
 {
   "name": "hexo-generator-multilingual-index",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Multilingual index generator for Hexo.",
   "main": "index",
   "scripts": {
