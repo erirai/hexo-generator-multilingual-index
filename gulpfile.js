@@ -20,7 +20,7 @@ gulp.task('git-push:confirm', ['git-show'], function(done) {
     default: false,
     name: 'push'
   }], function(answers) {
-    if(answers.push) {
+    if (answers.push) {
       gulp.start('git-push');
     }
     done();
