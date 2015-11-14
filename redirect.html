@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="1;url={{ redirect | uriencode }}" />
+    <link rel="canonical" href="{{ redirect | uriencode }}" />
+    <script type="text/javascript">
+      window.location.href = "{{ redirect | uriencode }}"
+    </script>
+    <title>Page Redirection</title>
+  </head>
+  <body>
+    If you are not redirected automatically, follow <a href='{{ redirect | uriencode }}'>this link</a>.
+  </body>
+</html>
