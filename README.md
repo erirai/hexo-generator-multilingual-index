@@ -16,6 +16,8 @@ $ npm install hexo-generator-multilingual-index --save
 
 ## Options
 
+You can configure this plugin in `_config.yml`.
+
 ``` yaml
 index_generator:
   per_page: 10
@@ -24,6 +26,15 @@ index_generator:
 
 - **per_page**: Posts displayed per page. (0 = disable pagination).
 - **order_by**: Posts order. (Order by date descending by default).
+
+### Localizable configuration
+
+These are the values that this generator uses and can be [localized](https://github.com/ahaasler/hexo-multilingual#_c-configuration-locales "Configuring locales"):
+
+- index_generator
+  - per_page
+  - order_by
+- pagination_dir
 
 ## License
 
