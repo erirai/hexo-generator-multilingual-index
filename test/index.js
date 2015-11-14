@@ -18,7 +18,6 @@ describe('Index generator', function() {
   var process = processor.process.bind(hexo);
   var source = hexo.source;
   var File = source.File;
-  var Data = hexo.model('Data');
 
   function newFile(options) {
     var path = options.path;
@@ -70,11 +69,13 @@ describe('Index generator', function() {
       {source: 'tres', slug: 'tres', lang: 'es', date: 1e8 + 2, order: 1}
     ]).then(function(data) {
       posts = Post.sort('-date');
+
       function filterPosts(lang) {
-        return posts.filter(function (post) {
+        return posts.filter(function(post) {
           return post.lang === lang;
         });
       }
+
       enPosts = filterPosts('en');
       esPosts = filterPosts('es');
       locals = hexo.locals.toObject();
