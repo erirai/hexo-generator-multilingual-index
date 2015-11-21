@@ -121,6 +121,13 @@ describe('Index generator', function() {
     result[1].data.next_link.should.eql('en/page/2/');
     result[1].data.__index.should.be.true;
     result[1].data.lang.should.eql('en');
+    result[1].data.alternates.length.should.eql(2);
+    result[1].data.alternates[0].title.should.eql('Hexo');
+    result[1].data.alternates[0].lang.should.eql('en');
+    result[1].data.alternates[0].path.should.eql('en');
+    result[1].data.alternates[1].title.should.eql('Hexo');
+    result[1].data.alternates[1].lang.should.eql('es');
+    result[1].data.alternates[1].path.should.eql('es');
 
     result[2].path.should.eql('en/page/2/');
     result[2].data.current_url.should.eql('en/page/2/');
@@ -131,6 +138,12 @@ describe('Index generator', function() {
     result[2].data.next_link.should.eql('');
     result[2].data.__index.should.be.true;
     result[2].data.lang.should.eql('en');
+    result[2].data.alternates[0].title.should.eql('Hexo');
+    result[2].data.alternates[0].lang.should.eql('en');
+    result[2].data.alternates[0].path.should.eql('en');
+    result[2].data.alternates[1].title.should.eql('Hexo');
+    result[2].data.alternates[1].lang.should.eql('es');
+    result[2].data.alternates[1].path.should.eql('es');
 
     result[3].path.should.eql('es/');
     result[3].data.current_url.should.eql('es/');
@@ -141,6 +154,12 @@ describe('Index generator', function() {
     result[3].data.next_link.should.eql('es/pagina/2/');
     result[3].data.__index.should.be.true;
     result[3].data.lang.should.eql('es');
+    result[3].data.alternates[0].title.should.eql('Hexo');
+    result[3].data.alternates[0].lang.should.eql('en');
+    result[3].data.alternates[0].path.should.eql('en');
+    result[3].data.alternates[1].title.should.eql('Hexo');
+    result[3].data.alternates[1].lang.should.eql('es');
+    result[3].data.alternates[1].path.should.eql('es');
 
     result[4].path.should.eql('es/pagina/2/');
     result[4].data.current_url.should.eql('es/pagina/2/');
@@ -151,6 +170,12 @@ describe('Index generator', function() {
     result[4].data.next_link.should.eql('');
     result[4].data.__index.should.be.true;
     result[4].data.lang.should.eql('es');
+    result[4].data.alternates[0].title.should.eql('Hexo');
+    result[4].data.alternates[0].lang.should.eql('en');
+    result[4].data.alternates[0].path.should.eql('en');
+    result[4].data.alternates[1].title.should.eql('Hexo');
+    result[4].data.alternates[1].lang.should.eql('es');
+    result[4].data.alternates[1].path.should.eql('es');
 
     // Restore config
     hexo.config.index_generator.per_page = 10;
@@ -178,6 +203,12 @@ describe('Index generator', function() {
     result[1].data.next_link.should.eql('');
     result[1].data.__index.should.be.true;
     result[1].data.lang.should.eql('en');
+    result[1].data.alternates[0].title.should.eql('Hexo');
+    result[1].data.alternates[0].lang.should.eql('en');
+    result[1].data.alternates[0].path.should.eql('en');
+    result[1].data.alternates[1].title.should.eql('Hexo');
+    result[1].data.alternates[1].lang.should.eql('es');
+    result[1].data.alternates[1].path.should.eql('es');
 
     result[2].path.should.eql('es/');
     result[2].layout.should.eql(['index', 'archive']);
@@ -192,6 +223,12 @@ describe('Index generator', function() {
     result[2].data.next_link.should.eql('');
     result[2].data.__index.should.be.true;
     result[2].data.lang.should.eql('es');
+    result[2].data.alternates[0].title.should.eql('Hexo');
+    result[2].data.alternates[0].lang.should.eql('en');
+    result[2].data.alternates[0].path.should.eql('en');
+    result[2].data.alternates[1].title.should.eql('Hexo');
+    result[2].data.alternates[1].lang.should.eql('es');
+    result[2].data.alternates[1].path.should.eql('es');
 
     // Restore config
     hexo.config.index_generator.per_page = 10;
