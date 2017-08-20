@@ -2,10 +2,36 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="1;url={{ redirect | uriencode }}" />
+    <!--<meta http-equiv="refresh" content="1;url={{ redirect | uriencode }}" />-->
     <link rel="canonical" href="{{ redirect | uriencode }}" />
     <script type="text/javascript">
-      window.location.href = "{{ redirect | uriencode }}"
+      function lookup() {
+        var found = [];
+
+        if (typeof navigator !== 'undefined') {
+          if (navigator.userLanguage) {
+            found.push(navigator.userLanguage);
+          }
+          if (navigator.language) {
+            found.push(navigator.language);
+          }
+          if (navigator.languages) { // chrome only; not an array, so can't use .push.apply instead of iterating
+            for (var i = 0; i < navigator.languages.length; i++) {
+              found.push(navigator.languages[i]);
+            }
+          }
+        }
+
+        return found.length > 0 ? found : undefined;
+      }
+
+      var lng = lookup()[0];
+      if (lng.indexOf('-') > -1) lng = lng.substring(0, lng.indexOf('-'));
+
+      var configuredLanguages = ['it', 'de'];
+      if (configuredLanguages.indexOf(lng) < 0) lng = '{{ redirect | uriencode }}';
+
+      window.location.href = lng;
     </script>
     <title>Page Redirection</title>
   </head>
